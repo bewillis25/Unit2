@@ -17,10 +17,10 @@ Create a program which will take in an input and print out that input divided by
 Alter one line of that program to return only whole numbers.
 
 '''
-#Takes in input and divides by two
+#Takes in input and divides by two.
 num = int(input("Enter a number: "))
 print(f"{(num/2)}")
 
-#Takes in input, divides by two, and returns a whole number
+#Takes in input, divides by two, and returns a whole number.
 num = int(input("Enter a number: "))
 print(f"{int(num/2)}")

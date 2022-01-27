@@ -75,3 +75,9 @@ if can_i_ride == True:
 if can_i_ride == False:
     print("Sorry, but you can't ride.")
 
+<<<<<<< HEAD
+not(x and y) == not x or not y
+'''
+# Can I be President?
+=======
+>>>>>>> 10c005ec51e49801718d57af3e6a0d87f8dc8872

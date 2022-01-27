@@ -51,3 +51,4 @@ not(x or y) == not x and not y
 
 not(x and y) == not x or not y
 '''
+# Can I be President?

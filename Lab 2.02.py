@@ -51,7 +51,7 @@ not(x or y) == not x and not y   I think this is true, since if 'x or y' is True
 
 not(x and y) == not x or not y   I think this is true as well, since if 'x and y' is True, then not(x and y) == False, and because both x == True and y == True, 'not x or not y' will also be False, since 'not(True) or not(True)' is False. The same logic also applies if 'x and y' is False, where not(x and y) == True, and because either x or y is False, we know either 'not x' or 'not y' will be True, and 'not(False) or not(False or True)' will be True, just like not(x and y).
 '''
-# Can I be president
+# Can I be president?
 age1 = int(input("What is your age? "))
 resident_time = int(input("How many years have you been a resident of the US? "))
 natural_born_citizen = input("Are you are natural born citizen of the US, yes or no: ")

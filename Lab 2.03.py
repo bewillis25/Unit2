@@ -71,7 +71,7 @@ if side1 + side2 > side3 and side1 + side3 > side2 and side2 + side3 > side1:
     print(f"The perimeter of the triangle is {side1 + side2 + side3}")
     if side1^2 + side2^2 == side3^2:
         print("This is a right triangle")
-    elif side1 == side2 == side3:
+    if side1 == side2 == side3:
         print("This is an equilateral triangle")
     elif side1 == side2 or side1 == side3 or side2 == side3:
         print("This is an isosceles triangle")

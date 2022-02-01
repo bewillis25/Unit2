@@ -11,9 +11,9 @@ print(len(a_list))
 In your Notebook
 ----------------
 Answer the following
-What type do you think a_list is? (Hint: look at the name of the variable)
+What type do you think a_list is? (Hint: look at the name of the variable) A list
 
-What does len do?
+What does len do?  Gives the length of the list, i.e. the number of items in the list.
 
 
 2. In your Console
@@ -31,4 +31,5 @@ print(a_list[6])
 Continue In your Notebook
 -------------------------
 Explain what happens in the program.
+print(a_list[n]) prints the nth item of the list a_list
 

@@ -32,7 +32,7 @@ Example 4
     a[3] = 'haha'
     print(a)
 
-    prediction: ['a','b','c','haha','e'], replaces a[3] which was 'd' with 'haha'
+    prediction: ['a','b','c','haha','e']: replaces a[3] which was 'd' with 'haha'
     actual: ['a','b','c','haha','e']
 
 2. Create this game again using lists and indexes
@@ -86,14 +86,53 @@ Hint: Use a search engine to find the largest number in a python list.
 ----------------------
 ​Starter code here​:
 ----------------------
-food = ['donuts', 'pancakes', 'bacon', 'waffles','eggs','baggles']
+# Find favorite food from list
+food = ['donuts', 'pancakes', 'bacon', 'waffles','eggs','bagles']
 score = [0,0,0,0,0,0]
 
 print('Please answer each questions with "y" for "yes" and "n" for "no."')
-user_input = input('Do you like food with holes? ')
-if user_input == 'y':
+user_input1 = input('Do you like food with holes? ')
+user_input2 = input("Do you like crunchy foods? ")
+user_input3 = input("Do you like food made from batter/dough? ")
+user_input4 = input("Do you like sweet foods? ")
+user_input5 = input("Do you like foods with syrup? ")
+user_input6 = input("Do you like meat? ")
+user_input7 = input("Do you like fragile food? ")
+user_input8 = input("Do you like cooked food more than uncooked food( i.e. fruit)? ")
+max_index = score.index(max(score))
+if user_input1 == 'y':
   score[0] = score[0] + 1
   score[5] = score[5] + 1
+if user_input2 == 'y':
+    score[2] = score[2] + 1
+    score[3] = score[3] + 1
+    score[5] = score[5] + 1
+if user_input3 == 'y':
+    score[0] = score[0] + 1
+    score[1] = score[1] + 1
+    score [3] = score[3] + 1
+    score[4] = score[4] + 1
+if user_input4 == 'y':
+    score[0] = score[0] + 1
+if user_input5 == 'y':
+    score[1] = score[1] + 1
+    score[3] = score[3] + 1
+if user_input6 == 'y':
+    score[2] = score[2] + 1
+if user_input7 == 'y':
+    score[4] = score[4] + 1
+if user_input8 == 'y':
+    score[0] = score[0] + 1
+    score[1] = score[1] + 1
+    score [2] = score[2] + 1
+    score[3] = score[3] + 1
+    score [4] = score[4] + 1
+    score[5] = score[5] + 1
+if max(score) == 0:
+    print("Not enough information to determine favorite food")
+else:
+    print(f"You're favorite food from my list is {food[max_index]} and your second favorite food is {food[max_index - 1]}")
+
 
 ##############################
 Together in class:
@@ -103,22 +142,20 @@ Research nested lists and work through the following Examples:
 Bonus Example 1
 a = ['a', 'b', 'c', ['d', 'e']]
 print(len(a))
+This will be the length of list a which is 4
 Bonus Example 2
 a = ['a', 'b', 'c', ['d', 'e']]
 b = a[3]
 print(b)
+This will print ['d','e']
 Bonus - In your Notebook
-How would you access d from the list a?
+How would you access d from the list a? Since print(b[0]) prints 'd', we just enter print(a[3][1])
 '''
-food = ['donuts', 'pancakes', 'bacon', 'waffles','eggs','baggles']
-score = [0,0,0,0,0,0]
 
-print('Please answer each questions with "y" for "yes" and "n" for "no."')
-user_input1 = input('Do you like food with holes? ')
-if user_input == 'y':
-  score[0] = score[0] + 1
-  score[5] = score[5] + 1
-else:
-    pass
-user_input2 = 
+
+
+
+
+
+
 

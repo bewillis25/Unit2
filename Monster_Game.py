@@ -1,3 +1,7 @@
+
+#Text Monster Game 
+
+#Initial variable settings and floor plan
 floor_1 = ['nothing','sword','sword','monster','up stairs']
 floor_2 = ['down stairs','sword','monster','magic stone','up stairs']
 floor_3 = ['down stairs','monster','sword','boss monster','prize']
@@ -7,7 +11,9 @@ floor_list = [floor_1,floor_2,floor_3]
 inventory = []
 print("Welcome to this text themed adventure game. You may enter in 8 commands: \n 'left' allows you to move one room to the left \n 'right' allows you to move one room to the right \n 'up' allows you to move up an up staircase \n 'down' allows you to move down a down staircase \n 'fight' allows you to fight a monster if you encounter one \n 'grab' allows you to pick up an item and put in in your 3 slot inventory \n 'help' brings up this menu again \n 'quit' ends the game ")
 action = ''
+# main game loop
 while action != 'quit':
+    # If item in room is a monster loop
     if floor_list[user_floor][user_room] == 'monster':
         monster_action = input("There is a monster in this room. You can choose 'fight' to try and defeat the monster, 'leave' to go back the way you came, or 'run' to try and run past the monster, which one do you choose? ")
         if monster_action == 'fight':
@@ -28,6 +34,7 @@ while action != 'quit':
             break
         else:
             print("Please enter 'fight', 'leave', or 'run'.")
+    # If item in room is the boss monster loop
     elif floor_list[user_floor][user_room] == 'boss monster':
         boss_monster_action = input("You have reached the boss monster who guards the treasure in the other room. You can try to use 'fight' to defeat him, 'leave' to go back the way you came, or 'run' to run past the boss monster. Which one do you choose? ")
         if boss_monster_action == 'fight':
@@ -52,10 +59,12 @@ while action != 'quit':
             break 
         else:
             print("Please enter 'fight', 'leave', or 'run'.")
+    # If the item in the room isn't a monster or a boss monster
     else:
         print(f"You are in room {str(user_room + 1)} on floor {str(user_floor + 1)}")
         print(f"The item in this room is: {floor_list[user_floor][user_room]}")
         action = input("    Enter a command: ")
+        # Conditionals for actions done in game
         if action == 'left':
             if user_room == 0:
                 print("I'm sorry, there is no room to the left.")
@@ -77,7 +86,7 @@ while action != 'quit':
                 print("I'm sorry, there are no stairs to go down.")
             elif floor_list[user_floor][user_room] == 'down stairs':
                 user_floor = user_floor -1
-                user_room = 0
+                user_room = 5
         elif action == 'help':
             print("Welcome to this text themed adventure game. You may enter in 8 commands: \n 'left' allows you to move one room to the left \n 'right' allows you to move one room to the right \n 'up' allows you to move up an up staircase \n 'down' allows you to move down a down staircase \n 'fight' allows you to fight a monster if you encounter one \n 'grab' allows you to pick up an item and put it in your 3 slot inventory \n 'help' brings up this menu again \n 'quit' ends the game ")
         elif action == 'grab':
@@ -104,4 +113,4 @@ while action != 'quit':
             print("There is no monster to fight here.")
         else:
             print("Please enter a valid command.")
-
+            
